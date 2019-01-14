@@ -1,0 +1,289 @@
+/* ***** Stylesheet for PlanetWerks Widget ************************* */
+
+html, body {
+  font:normal 10pt Arial,Helvetica,sans-serif;
+  margin:0px;
+  padding:0px;
+  overflow:hidden;
+}
+body.nodragon {
+  -apple-dashboard-region:dashboard-region(control rectangle 0px 0px 0px 0px);
+}
+
+/* ***** Planets *************************************************** */
+body div#system {
+  position:relative;
+  background:#010101 url(ui/starfield.png) repeat scroll 0 0;
+  z-index:0;
+  overflow:hidden;
+}
+body div#system canvas {
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+body div#system img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  cursor:pointer;
+  visibility:hidden;
+  display:block;
+  border:5px solid transparent;
+  padding:5px;
+}
+body div#system.highlight img {
+  border:5px inset #ffffff;
+}
+body div#system.nofact img {
+  cursor:default;
+}
+body div#system img.distant {
+  z-index:-100000;
+  border:0px none;
+  padding:0px;
+  cursor:default;
+  visibility:visible;
+}
+body div#system div.locator {
+  position:absolute;
+  z-index:9999;
+  height:66px;
+  width:66px;
+  background:transparent url(ui/locator.up.png) no-repeat scroll center center;
+  display:none;
+}
+body div#system div.locator img {
+  visibility:visible;
+  border:0px none;
+  padding:0px;
+  width:20px;
+  height:24px;
+  top:21px;
+  left:23px;
+  cursor:default;
+}
+
+/* ***** Legend List *********************************************** */
+body ul#legend {
+  position:absolute;
+  top:8px;
+  left:8px;
+  font-size:11px;
+  color:#ffffff;
+  background-color:transparent;
+  border:2px inset transparent;
+  margin:0px;
+  padding:2px 5px;
+  list-style-type:none;
+}
+body ul#legend.ontrans {
+  background-color:#010101;
+  border-color:#ffffff;
+}
+body ul#legend li:first-child {
+  cursor:pointer;
+}
+
+/* ***** Factboxes ************************************************* */
+body div#fact {
+  position:absolute;
+  width:350px;
+  height:140px;
+  background:transparent none no-repeat scroll center center;
+  z-index:1000;
+  display:none;
+  opacity:0;
+}
+body div#fact.top.right { background-image:url(ui/info-top-right.png); }
+body div#fact.bottom.right { background-image:url(ui/info-bottom-right.png); }
+body div#fact.bottom.left { background-image:url(ui/info-bottom-left.png); }
+body div#fact.top.left { background-image:url(ui/info-top-left.png); }
+
+body div#fact h1 {
+  position:absolute;
+  height:20px;
+  margin:0px;
+  line-height:20px;
+  font:normal 18px Trebuchet,Arial,Helvetica,sans-serif;
+}
+body div#fact.top h1 { top:4px; }
+body div#fact.right h1 { right:7px; text-align:right; }
+body div#fact.bottom h1 { bottom:7px; }
+body div#fact.left h1 { left:5px; text-align:left; }
+
+body div#fact small {
+  position:absolute;
+  font:normal 11px Trebuchet,Arial,Helvetica,sans-serif;
+}
+body div#fact.top small { top:7px; }
+body div#fact.right small { left:137px; }
+body div#fact.bottom small { bottom:10px; }
+body div#fact.left small { right:135px; }
+
+body div#fact > img {
+  position:absolute;
+  border-width:0px;
+}
+body div#fact.top > img { top:68px; }
+body div#fact.right > img { right:238px; }
+body div#fact.bottom > img { bottom:68px; }
+body div#fact.left > img { left:238px; }
+
+body div#fact p {
+  position:absolute;
+  height:85px;
+  width:230px;
+  margin:0px;
+  font:normal 14px Trebuchet,Arial,Helvetica,sans-serif;
+  line-height:17px;
+}
+body div#fact.top p { top:31px; }
+body div#fact.right p { right:7px; text-align:right; }
+body div#fact.bottom p { bottom:31px; }
+body div#fact.left p { left:7px; text-align:left; }
+
+body div#fact.right p img { float:right; margin-left:3px; }
+body div#fact.left p img { float:left; margin-right:3px; }
+
+body div#fact p sup,
+body div#fact p sub {
+  line-height:0px;
+}
+
+body div#fact p a {
+  text-decoration:none;
+  color:#0000dd;
+}
+body div#fact p a:hover {
+  color:#5555dd;
+}
+
+/* ***** Menu ****************************************************** */
+body div#menu {
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:233px;
+  z-index:0;
+}
+
+body div#menu span#close {
+  position:absolute;
+  top:-15px;
+  right:-15px;
+  width:20px;
+  height:20px;
+  cursor:pointer;
+}
+body div#menu span#close {
+  background:transparent url(ui/close.png) no-repeat scroll left top;
+}
+body div#menu span#close:hover {
+  background-position:left -20px;
+}
+
+body div#menu h1 {
+  margin:0px;
+  text-align:center;
+}
+
+body div#menu ul#bar {
+  position:relative;
+  margin:0px;
+  padding:8px 14px;
+  top:-7px;
+  left:-14px;
+  line-height:16px;
+  text-align:center;
+  height:31px;
+  width:230px;
+  background:transparent url(ui/menu-top.png) no-repeat scroll top center;
+  z-index:10;
+}
+body div#menu ul#bar li {
+  display:inline;
+  text-align:center;
+  line-height:16px;
+  color:#000000;
+  font:bold 11px Arial,Helvetica,sans-serif;
+  cursor:pointer;
+  padding:1px 3px;
+}
+body div#menu ul#bar li:hover {
+  color:#444444;
+}
+
+body div#menu ul#pages {
+  position:absolute;
+  top:44px;
+  left:2px;
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+body div#menu ul#pages > li {
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:20px 10px 10px 10px;
+  width:204px;
+  z-index:0;
+  border:2px groove #888888;
+  color:#333333;
+  background:#ffffff url(ui/menu-background.jpg) no-repeat scroll top left;
+  font:normal 12px Arial,Helvetica,sans-serif;
+  overflow:hidden;
+  visibility:hidden;
+}
+body div#menu ul#pages > li h2 {
+  margin:0px 0px 3px 0px;
+  font-size:14px;
+  border-bottom:1px solid #999999;
+}
+body div#menu ul#pages > li h3 {
+  margin:0px 0px 3px 0px;
+  font-size:12px;
+  border-bottom:1px solid #bbbbbb;
+  text-align:right;
+}
+body div#menu ul#pages > li p {
+  padding:3px 0px 5px 0px;
+  margin:0px;
+}
+body div#menu ul#pages > li p.footer {
+  border-top:1px solid #666666;
+  color:#444444;
+  font-size:11px;
+  margin:15px 0px 0px 0px;
+  padding-bottom:0px;
+}
+body div#menu ul#pages > li dl {
+  margin:5px 0px 0px 0px;
+}
+body div#menu ul#pages > li dl > dt {
+  white-space:nowrap;
+  font-weight:bold;
+  font-size:12px;
+  float:left;
+  padding-right:10px;
+}
+body div#menu ul#pages > li dl > dd {
+  font-size:11px;
+  text-align:right;
+  margin:0px 0px 6px 0px;
+}
+body div#menu ul#pages > li ol {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+body div#menu ul#pages > li ol li {
+  padding-bottom:5px;
+}
+body div#menu ul#pages > li ol li label {
+  display:block;
+}
+body div#menu ul#pages > li ol li label select {
+  font-size:11px;
+}

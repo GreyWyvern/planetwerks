@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget network="public">
+  <widgetname>PlanetWerks</widgetname>
+  <description>
+    An interactive, educational and accurate Solar System simulation
+  </description>
+  <icon>icon16.png</icon>
+  <icon>icon32.png</icon>
+  <icon>icon64.png</icon>
+  <icon>icon128.png</icon>
+  <id>
+    <host>www.greywyvern.com</host>
+    <name>planetwerks</name>
+    <revised>2010-05</revised>
+  </id>
+  <width>800</width>
+  <height>600</height>
+  <author>
+    <name>GreyWyvern</name>
+    <email>greywyvern@greywyvern.com</email>
+    <link>http://www.greywyvern.com/</link>
+    <organization>GreyWyvern.com</organization>
+  </author>
+  <security>
+    <access>
+      <protocol>http</protocol>
+      <port>80</port>
+    </access>
+  </security>
+</widget>

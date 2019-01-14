@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlanetWerks 2</title>
+    <base href=".">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="index.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="data.js" charset="UTF-8"></script>
+  </head>
+  <body>
+    <div id="system">
+      <canvas width="800" height="600"></canvas>
+    </div>
+    <ul id="legend">
+      <li>&Delta;: Coarse</li>
+      <li>AU: ~</li>
+      <li>1s = ~</li>
+    </ul>
+    <div id="fact"><h1>Title</h1><small>&nbsp;</small><img src="symbol/sol.png" alt="Sol"><p>Fact text</p></div>
+    <div id="menu">
+      <span id="close">&nbsp;</span>
+      <h1><img src="ui/title.png" id="title" alt="PlanetWerks"></h1>
+      <ul id="bar">
+        <li>Welcome</li><li>Scale</li><li>Controls</li><li>Options</li>
+      </ul>
+      <ul id="pages">
+        <li id="page1">
+          <h2>Welcome!</h2>
+          <p>
+            Welcome to PlanetWerks 2, a widget-sized trip through our solar system.
+            Along the way you can learn a few surprising facts as well as seeing some amazing images of our planetary companions.
+          </p>
+          <p>
+            Plenty of new features have been added, so be sure to examine the <strong>Controls</strong> and <strong>Options</strong> panels to discover all the ways with which you can interact with PlanetWerks 2.
+          </p>
+          <p class="footer">
+            Version <span id="footer_version">-</span> - &copy; <span id="footer_date">-</span> GreyWyvern
+          </p>
+        </li>
+        <li id="page2">
+          <h2>Power vs. Linear Scale</h2>
+          <p>
+            By default, PlanetWerks uses <a href="http://en.wikipedia.org/wiki/Power_law">power laws</a> to make browsing our neighbourhood a little easier.
+            A power law scale with an exponent less than one compresses a linear scale so that far away objects appear much closer, tiny objects get larger, huge objects get smaller, and very slow objects speed up.
+          </p>
+          <p>
+            You can select a linear scale for orbit speed, object size and physical distance using the Options menu.
+            With all three options checked, you'll be able to see just how vast the solar system truly is, and how very tiny is our own little planet!
+          </p>
+        </li>
+        <li id="page3">
+          <h2>Controls</h2>
+          <h3>Precision (&Delta;) controls</h3>
+          <dl>
+            <dt>Arrow Keys</dt> <dd>Adjust system Pitch/Yaw</dd>
+            <dt>1 &amp; 2</dt> <dd>Adjust system Roll</dd>
+            <dt>Home &amp; End</dt> <dd>Zoom system in and out</dd>
+          </dl>
+          <h3>Other controls</h3>
+          <dl>
+            <dt>Ins or Shift+Del &amp; Del</dt> <dd>Adjust orbit speed</dd>
+            <dt>PgUp</dt> <dd>Snap to Above Ecliptic</dd>
+            <dt>PgDn</dt> <dd>Snap to Edge-on Ecliptic</dd>
+            <dt>Space</dt> <dd>Toggle Sol-orbit motion</dd>
+            <dt>Shift+Space</dt> <dd>Toggle satellite motion</dd>
+            <dt>P</dt> <dd>Set adjustment <u>p</u>recision (&Delta;)</dd>
+            <dt>M</dt> <dd>Hide PlanetWerks <u>m</u>enu</dd>
+            <dt>B</dt> <dd>Cycle <u>b</u>ackgrounds</dd>
+            <dt>F</dt> <dd>Toggle planetoid <u>f</u>inder</dd>
+            <dt>T</dt> <dd>Toggle orbit path <u>t</u>rails</dd>
+            <dt>F5</dt> <dd>Reload/Reset widget</dd>
+          </dl>
+        </li>
+        <li id="page4">
+          <h2>Options</h2>
+          <ol>
+            <li>
+              <label><input type="checkbox" id="allowFacts" checked="checked"> Display factboxes</label>
+            </li>
+            <li>
+              <label>Viewport
+                <select size="1" id="systemSize">
+                  <option value="640x480">640 x 480</option>
+                  <option value="800x600">800 x 600</option>
+                  <option value="1024x768">1024 x 768</option>
+                  <option value="1152x864">1152 x 864</option>
+                  <option value="1280x1024">1280 x 1024</option>
+                  <option value="1600x1200">1600 x 1200</option>
+                  <option value="1920x1080">1920 x 1080</option>
+                  <option value="1920x1200">1920 x 1200</option>
+                  <option value="2048x1536">2048 x 1536</option>
+                </select>
+              </label>
+            </li>
+            <li>
+              <h3>Linear Scale</h3>
+              <label><input type="checkbox" id="realSpeed"> Orbit speed</label>
+              <label><input type="checkbox" id="realDistance"> Distance</label>
+              <label><input type="checkbox" id="realSize"> Planetoid Size</label>
+            </li>
+            <li>
+              <h3>Show Planetoids</h3>
+              <label><input type="checkbox" id="showPlanet" checked="checked"> Show planets</label>
+              <label><input type="checkbox" id="showDwarf" checked="checked"> Show dwarf planets</label>
+              <label><input type="checkbox" id="showTNO"> Show TNOs</label>
+              <label><input type="checkbox" id="showMoon"> Show satellites</label>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
